@@ -1,0 +1,421 @@
+@font-face {
+  font-family: ShabnamLite;
+  src: url("../font/Shabnam-Light-FD.ttf");
+}
+
+@font-face {
+  font-family: Aramco;
+  src: url("../font/Far_Aramco.ttf");
+}
+
+@font-face {
+  font-family: Monteserrat;
+  src: url("../font/Montserrat-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: normal 16px Aramco;
+}
+
+body {
+  background: #272f44 url("../image/HairTransplantation_Background.jpg") center/contain no-repeat;
+  position: relative;
+}
+
+@media only screen and (max-width: 1480px) {
+  body {
+    background: #272f44 url("../image/Register_Background.jpg") top/cover no-repeat !important;
+    height: 1450px;
+  }
+}
+
+.body {
+  width: 100%;
+  max-width: 1180px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px;
+  z-index: -1;
+}
+
+.body .body-inner {
+  margin-top: 30px;
+}
+
+.body .body-inner img {
+  width: 100%;
+}
+
+.body .body-inner .body-inner-discription {
+  padding: 25px;
+  margin: 50px 0;
+}
+
+.body .body-inner .body-inner-discription h2 {
+  font: normal 24px Aramco;
+  color: #272f44;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.body .body-inner .body-inner-discription h2::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #d2ab68;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -25px;
+}
+
+.body .body-inner .body-inner-discription p {
+  color: #939aa4;
+  font: normal 14px Aramco;
+  line-height: 2.25rem;
+}
+
+.body .body-inner .order-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: transparent url("../image/Order_Dots_Background.jpg") top/contain no-repeat;
+}
+
+.body .body-inner .order-section img {
+  width: 50%;
+}
+
+.body .body-inner .order-section .order-desc,
+.body .body-inner .order-section .after-before-desc {
+  margin-top: 50px;
+  padding: 30px;
+}
+
+.body .body-inner .order-section .order-desc p,
+.body .body-inner .order-section .after-before-desc p {
+  font: normal 12px Aramco;
+  color: #272f44;
+  line-height: 1.5rem;
+}
+
+.body .body-inner .order-section .order-desc a,
+.body .body-inner .order-section .after-before-desc a {
+  display: block;
+  background-color: #ffe0e8;
+  width: 180px;
+  height: 40px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #b35a71;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
+  font-size: 14px;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.body .body-inner .order-section .order-desc a:hover,
+.body .body-inner .order-section .after-before-desc a:hover {
+  -webkit-box-shadow: 0 0 15px 0px #ffe0e8;
+          box-shadow: 0 0 15px 0px #ffe0e8;
+}
+
+.body .body-inner .Wrapper {
+  padding: 10px;
+  width: 100%;
+  margin: 25px 0 75px;
+}
+
+.body .body-inner .clinic-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.body .body-inner .clinic-services span {
+  color: #939aa4;
+  font-size: 14px;
+}
+
+.body .body-inner .clinic-services h2 {
+  color: #d2ab68;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.body .body-inner .clinic-services p {
+  font-size: 12px;
+  color: #c7cacf;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.body .body-inner .clinic-services p:nth-child(3) {
+  font-size: 14px;
+  color: #272f44;
+  margin: 0;
+}
+
+.body .body-inner .after-before-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background: transparent url("../image/After_Before_Dot_Background.jpg") top/contain no-repeat;
+  margin-top: 100px;
+}
+
+.body .body-inner .after-before-section img {
+  width: 50%;
+}
+
+.body .body-inner .after-before-section .after-before-desc {
+  margin-top: 25px;
+  padding: 30px;
+}
+
+.body .body-inner .after-before-section .after-before-desc span {
+  color: #272f44;
+  font-size: 12px;
+}
+
+.body .body-inner .after-before-section .after-before-desc h3 {
+  color: #272f44;
+  font-size: 24px;
+  margin: 10px 0 5px 0;
+}
+
+.body .body-inner .after-before-section .after-before-desc p {
+  color: #939aa4;
+  font-size: 12px;
+  line-height: 1.5rem;
+}
+
+.body .body-inner .hair-transplantation-intro-video {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .body .body-inner .hair-transplantation-intro-video {
+    padding: 0 50px 50px;
+  }
+}
+
+.body .body-inner .hair-transplantation-intro-video video {
+  width: 100%;
+  border-radius: 25px;
+  z-index: 2;
+}
+
+.body .body-inner .hair-transplantation-intro-video img {
+  position: absolute;
+  width: 120px;
+  height: 200px;
+  bottom: 25px;
+  right: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .body .body-inner .hair-transplantation-intro-video img {
+    display: none;
+  }
+}
+
+.footer-desc {
+  width: 100%;
+  margin: 50px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-desc {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+  }
+}
+
+.footer-desc .col .item {
+  background-color: #ffffff;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+  direction: rtl;
+}
+
+.footer-desc .col .item .numberic {
+  direction: ltr;
+}
+
+.footer-desc .col .item h4 {
+  color: #ee1390;
+  font-size: 24px;
+}
+
+.footer-desc .col .item span {
+  color: #2334a0;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.footer-desc .col .item p {
+  color: #b3bbc7;
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.5rem;
+  position: relative;
+}
+
+.footer-desc .col .item p::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 33px;
+  height: 3px;
+  background-color: #eef3f7;
+}
+
+.footer-desc .col .singleItem {
+  margin-top: 20px;
+}
+
+.footer-desc .sample {
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+  direction: rtl;
+  background: #d2ab68 url("../image/Footer_Desc_Sample_Background.jpg") left/contain no-repeat;
+}
+
+.footer-desc .sample h4 {
+  color: #ffffff;
+  font-size: 24px;
+  position: relative;
+}
+
+.footer-desc .sample h4::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 33px;
+  height: 3px;
+  background-color: #ffffff;
+}
+
+.footer-desc .sample span {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer-desc .sample p {
+  color: #272f44;
+  font-size: 14px;
+  line-height: 1.5rem;
+  margin-top: 45px;
+  max-width: 250px;
+}
+
+footer {
+  margin: 0;
+}
+/*# sourceMappingURL=hairtransplantation.css.map */

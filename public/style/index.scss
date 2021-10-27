@@ -1,0 +1,70 @@
+// VARs
+$xlScreen: 1000px;
+$largeScreen: 820px;
+$tabletScreen: 768px;
+$mobileScreen: 425px;
+
+@mixin Flex($jus, $align, $dir) {
+  display: flex;
+  justify-content: $jus;
+  align-items: $align;
+  flex-direction: $dir;
+}
+@font-face {
+  font-family: ShabnamLite;
+  src: url("../font/Shabnam-Light-FD.ttf");
+}
+@font-face {
+  font-family: Aramco;
+  src: url("../font/Far_Aramco.ttf");
+}
+@font-face {
+  font-family: Monteserrat;
+  src: url("../font/Montserrat-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal 16px Aramco;
+}
+body {
+  background: #272f44 url("../image/IndexBackground_Edition.jpg") center/cover
+    no-repeat;
+  height: 1000px;
+  position: relative;
+
+  @media only screen and (min-width: 1200px) {
+    & {
+      background: #272f44 url("../image/IndexBackground_Edition.jpg")
+        center/contain no-repeat !important;
+    }
+  }
+}
+.services {
+  width: 100%;
+  height: 200px;
+  margin-top: 500px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: $xlScreen) {
+    & {
+      @include Flex(space-between, center, row);
+      height: 100px;
+    }
+  }
+  .service {
+    width: 300px;
+    min-width: 300px;
+    max-width: 450px;
+    height: 50px;
+    border-radius: 25px;
+    @include Flex(center, center, row);
+    background: url("../image/IndexServices.jpg") center/cover no-repeat;
+    p {
+      color: #464646;
+    }
+  }
+}

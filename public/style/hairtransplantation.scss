@@ -1,0 +1,286 @@
+// VARs
+$xlScreen: 1000px;
+$largeScreen: 820px;
+$tabletScreen: 768px;
+$mobileScreen: 425px;
+
+@mixin Flex($jus, $align, $dir) {
+  display: flex;
+  justify-content: $jus;
+  align-items: $align;
+  flex-direction: $dir;
+}
+@font-face {
+  font-family: ShabnamLite;
+  src: url("../font/Shabnam-Light-FD.ttf");
+}
+@font-face {
+  font-family: Aramco;
+  src: url("../font/Far_Aramco.ttf");
+}
+@font-face {
+  font-family: Monteserrat;
+  src: url("../font/Montserrat-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal 16px Aramco;
+}
+body {
+  background: #272f44 url("../image/HairTransplantation_Background.jpg")
+    center/contain no-repeat;
+  position: relative;
+  @media only screen and (max-width: 1480px) {
+    & {
+      background: #272f44 url("../image/Register_Background.jpg") top/cover
+        no-repeat !important;
+        height: 1450px;
+    }
+  }
+}
+.body {
+  width: 100%;
+  max-width: 1180px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px;
+  z-index: -1;
+
+  .body-inner {
+    margin-top: 30px;
+    img {
+      width: 100%;
+    }
+    .body-inner-discription {
+      padding: 25px;
+      margin: 50px 0;
+      h2 {
+        font: normal 24px Aramco;
+        color: #272f44;
+        position: relative;
+        margin-bottom: 25px;
+        &::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          background-color: #d2ab68;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -25px;
+        }
+      }
+      p {
+        color: #939aa4;
+        font: normal 14px Aramco;
+        line-height: 2.25rem;
+      }
+    }
+    .order-section {
+      @include Flex(space-between, flex-start, row);
+      background: transparent url("../image/Order_Dots_Background.jpg")
+        top/contain no-repeat;
+      img {
+        width: 50%;
+      }
+      .order-desc,
+      .after-before-desc {
+        margin-top: 50px;
+        padding: 30px;
+        p {
+          font: normal 12px Aramco;
+          color: #272f44;
+          line-height: 1.5rem;
+        }
+        a {
+          display: block;
+          background-color: #ffe0e8;
+          width: 180px;
+          height: 40px;
+          border-radius: 25px;
+          text-decoration: none;
+          color: #b35a71;
+          @include Flex(space-evenly, center, row);
+          margin-top: 20px;
+          font-size: 14px;
+          transition: box-shadow 0.2s;
+          &:hover {
+            box-shadow: 0 0 15px 0px #ffe0e8;
+          }
+        }
+      }
+    }
+
+    .Wrapper {
+      padding: 10px;
+      width: 100%;
+      margin: 25px 0 75px;
+    }
+    .clinic-services {
+      @include Flex(center, center, column);
+      span {
+        color: #939aa4;
+        font-size: 14px;
+      }
+      h2 {
+        color: #d2ab68;
+        font-size: 30px;
+        margin: 10px 0;
+      }
+      p {
+        font-size: 12px;
+        color: #c7cacf;
+        margin-top: 50px;
+        text-align: center;
+        line-height: 1.5rem;
+        &:nth-child(3) {
+          font-size: 14px;
+          color: #272f44;
+          margin: 0;
+        }
+      }
+    }
+    .after-before-section {
+      @include Flex(space-between, flex-start, row-reverse);
+      background: transparent url("../image/After_Before_Dot_Background.jpg")
+        top/contain no-repeat;
+      margin-top: 100px;
+      img {
+        width: 50%;
+      }
+      .after-before-desc {
+        margin-top: 25px;
+        padding: 30px;
+        span {
+          color: #272f44;
+          font-size: 12px;
+        }
+        h3 {
+          color: #272f44;
+          font-size: 24px;
+          margin: 10px 0 5px 0;
+        }
+        p {
+          color: #939aa4;
+          font-size: 12px;
+          line-height: 1.5rem;
+        }
+      }
+    }
+    .hair-transplantation-intro-video {
+      width: 100%;
+      @include Flex(center, center, center);
+      position: relative;
+      @media only screen and (min-width: $tabletScreen) {
+        padding: 0 50px 50px;
+      }
+      video {
+        width: 100%;
+        border-radius: 25px;
+        z-index: 2;
+      }
+      img {
+        position: absolute;
+        width: 120px;
+        height: 200px;
+        bottom: 25px;
+        right: 25px;
+        @media only screen and (max-width: $tabletScreen) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.footer-desc {
+  width: 100%;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 20px;
+  @media only screen and (max-width: $tabletScreen) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+  }
+  .col {
+    .item {
+      background-color: #ffffff;
+      border-radius: 25px;
+      @include Flex(flex-start, center, column);
+      padding: 30px;
+      direction: rtl;
+      .numberic {
+        direction: ltr;
+      }
+      h4 {
+        color: #ee1390;
+        font-size: 24px;
+      }
+      span {
+        color: #2334a0;
+        margin: 10px 0;
+        text-align: center;
+      }
+      p {
+        color: #b3bbc7;
+        margin-top: 25px;
+        font-size: 14px;
+        line-height: 1.5rem;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: -20px;
+          right: 50%;
+          transform: translateX(50%);
+          width: 33px;
+          height: 3px;
+          background-color: #eef3f7;
+        }
+      }
+    }
+    .singleItem {
+      margin-top: 20px;
+    }
+  }
+  .sample {
+    border-radius: 25px;
+    @include Flex(flex-start, flex-start, column);
+    padding: 30px;
+    direction: rtl;
+    background: #d2ab68 url("../image/Footer_Desc_Sample_Background.jpg")
+      left/contain no-repeat;
+    h4 {
+      color: #ffffff;
+      font-size: 24px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 33px;
+        height: 3px;
+        background-color: #ffffff;
+      }
+    }
+    span {
+      color: #ffffff;
+      font-size: 14px;
+    }
+    p {
+      color: #272f44;
+      font-size: 14px;
+      line-height: 1.5rem;
+      margin-top: 45px;
+      max-width: 250px;
+    }
+  }
+}
+footer {
+  margin: 0;
+}

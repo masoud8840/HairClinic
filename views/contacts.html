@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Custom Styles -->
+    <link href="/public/style/styles.css" rel="stylesheet" />
+    <link href="/public/style/contacts.css" rel="stylesheet" />
+    <!-- Fontawesome CND -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- Vue.js CDN -->
+
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="/public/script/script.js"></script>
+    <title>کلینیک کاشت مو و ابرو | تماس با ما</title>
+  </head>
+  <body class="index">
+    <header>
+      <div class="container">
+        <div class="row-between">
+          <div class="logo">
+            <div class="logo-img">
+              <a href="index.html"
+                ><img alt="logo" src="/public/image/logo.png"
+              /></a>
+            </div>
+            <div class="logo-txt">
+              <span>مرکز کاشت</span> <span>مو و ابرو</span>
+            </div>
+          </div>
+          <div class="site-info">
+            <div class="site-phone" dir="ltr">
+              <span>021</span> <span>34567</span>
+            </div>
+            <div class="site-lang">
+              <div class="search-box">
+                <form action="">
+                  <input placeholder="جستجو کنید." type="text" />
+                </form>
+                <div class="input-handler"></div>
+              </div>
+              <div class="lang"><a href="#">AR</a> <a href="#">TR</a></div>
+              <select id="lang" name="lang">
+                <option value="FA">FA</option>
+                <option value="TR">TR</option>
+                <option value="AR">AR</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <div class="access-menu">
+            <i class="fas fa-bars menu-toggle-btn"></i>
+            <ul class="menu">
+              <li>
+                <a href="index.html">صفحه اصلی</a>
+              </li>
+              <li>
+                <a class="dropdown-btn" href="#"
+                  >خدمات <i class="fas fa-angle-down"></i
+                ></a>
+                <div class="dropdown-inner">
+                  <ul>
+                    <li>
+                      <a href="services/hairtransplantation.html"
+                        >کاشت موی سر</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#">کاشت و ترمیم ریش و سبیل</a>
+                    </li>
+                    <li>
+                      <a href="#">کاشت و ترمیم ابرو</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="abouts.html">درباره ما</a>
+              </li>
+              <li>
+                <a href="contacts.html">تماس با ما</a>
+              </li>
+            </ul>
+          </div>
+          <div class="user-menu">
+            <ul>
+              <li>
+                <a href="register.html">ثبت نام</a>
+              </li>
+              <li style="list-style: none"><span>/</span></li>
+              <li>
+                <a href="login.html">ورود</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container body">
+      <div class="path">
+        <div class="path-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="path-inner">
+          <a href="index.html">صفحه اصلی</a>
+          <i class="fas fa-chevron-left"></i> <span>تماس با ما</span>
+        </div>
+      </div>
+      <div class="body-inner">
+        <iframe
+          id="googleMap"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.0027948337406!2d51.418111684429164!3d35.701548836464326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e017663383d8f%3A0x5b2ead38a45e2bb2!2z2K7bjNin2KjYp9mGINin2YbZgtmE2KfYqCAmINiu24zYp9io2KfZhiDYp9iz2KrYp9ivINmG2KzYp9iqINin2YTZhNmH24zYjCDYqtmH2LHYp9mG2Iwg2KfYs9iq2KfZhiDYqtmH2LHYp9mG2Iwg2KfbjNix2KfZhg!5e0!3m2!1sfa!2sus!4v1635091572009!5m2!1sfa!2sus"
+          width="100%"
+          height="500px"
+          loading="eager"
+        ></iframe>
+        <div class="contacts-inner">
+          <div class="aside">
+            <img alt="logo" src="/public/image/DoubleLogo.jpg" />
+            <div class="contacts-call-time">
+              <p>شماره تماس</p>
+              <p><span>021</span><span>23456789</span></p>
+              <p>9:00 <span>الی</span> 17:00</p>
+            </div>
+          </div>
+          <div class="contacts-items">
+            <h2>تماس با ما</h2>
+            <div class="contacts-item">
+              <div class="contacts-item">
+                <div class="contacts-item-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contacts-item-txt">
+                  <span>آدرس</span>
+                  <p>
+                    تهران ، خیابان انقلاب ، خیابان استاد نجات اللهی (ویلا) ،
+                    کوچه مراغه پلاک 2 طبقه 5
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="contacts-item">
+              <div class="contacts-item">
+                <div class="contacts-item-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contacts-item-txt">
+                  <span>شماره تماس</span>
+                  <p class="numberic">021 2345678</p>
+                </div>
+              </div>
+              <div class="contacts-item">
+                <div class="contacts-item-icon">
+                  <i class="fas fa-inbox"></i>
+                </div>
+                <div class="contacts-item-txt">
+                  <span>کد پستی</span>
+                  <p class="numberic">0123456789</p>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="contacts-item">
+              <div class="contacts-item">
+                <div class="contacts-item-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contacts-item-txt">
+                  <span>ایمیل</span>
+                  <p>info@localhost.com</p>
+                </div>
+              </div>
+              <div class="contacts-item">
+                <div class="contacts-item-icon">
+                  <i class="fas fa-fax"></i>
+                </div>
+                <div class="contacts-item-txt">
+                  <span>فکس</span>
+                  <p class="numberic">02134567</p>
+                </div>
+              </div>
+            </div>
+            <img
+              class="sectionWrapper"
+              src="/public/image/SectionWrapper.jpg"
+              alt="SectionWrapper"
+            />
+
+            <div class="contacts-form">
+              <h3>فرم تماس با ما</h3>
+              <div class="contacts-form-inner">
+                <form action="#" method="post" autocomplete="off">
+                  <div class="contacts-form-inner-right">
+                    <div class="input-group">
+                      <input type="text" name="name" id="name" required />
+                      <label for="name">نام</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="email" name="email" id="email" required />
+                      <label for="email">ایمیل</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="text" name="subject" id="subject" required />
+                      <label for="subject">موضوع</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="tel" name="tel" id="tel" required />
+                      <label for="tel">شماره تلفن</label>
+                    </div>
+                    <div class="input-group">
+                      <button type="submit">ارسال</button>
+                    </div>
+                  </div>
+                  <div class="contacts-form-inner-left">
+                    <div class="input-group">
+                      <textarea
+                        name="userText"
+                        id="userText"
+                        required
+                      ></textarea>
+                      <label for="userText">متن</label>
+                    </div>
+                    <div class="input-group">
+                      <input type="text" name="capcha" id="capcha" required />
+                      <label for="capcha">پایتخت ایران کجاست؟</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="reserve-time">
+            <a href="reserve.html"
+              >دریافت نوبت انلاین <i class="fas fa-long-arrow-alt-left"></i
+            ></a>
+          </div>
+          <div class="copyright">
+            <p>تمامی حقوق این سایت برای <span>نام شرکت</span> محفوظ است</p>
+          </div>
+          <div class="socialmedia">
+            <a href="#"><i class="fas fa-basketball-ball"></i></a>
+            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://pinterset.com"
+              ><i class="fab fa-pinterest-p"></i
+            ></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </footer>
+      <div class="open-menu">
+        <ul>
+          <li>
+            <a href="index.html">صفحه اصلی</a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a class="dropdown-btn" href="#">خدمات</a>
+            </div>
+          </li>
+          <li>
+            <a href="abouts.html">درباره ما</a>
+          </li>
+          <li>
+            <a href="contacts.html">تماس با ما</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

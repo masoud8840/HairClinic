@@ -1,0 +1,210 @@
+// VARs
+$xlScreen: 1000px;
+$largeScreen: 820px;
+$tabletScreen: 768px;
+$mobileScreen: 425px;
+
+@mixin Flex($jus, $align, $dir) {
+  display: flex;
+  justify-content: $jus;
+  align-items: $align;
+  flex-direction: $dir;
+}
+@font-face {
+  font-family: ShabnamLite;
+  src: url("../font/Shabnam-Light-FD.ttf");
+}
+@font-face {
+  font-family: Aramco;
+  src: url("../font/Far_Aramco.ttf");
+}
+@font-face {
+  font-family: Monteserrat;
+  src: url("../font/Montserrat-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal 16px Aramco;
+}
+.user-menu {
+  ul {
+    @media only screen and (max-width: 1455px) {
+      & {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+body {
+  position: relative;
+  background: #272f44 url("../image/Register_Background.jpg") center/cover
+    no-repeat;
+  height: 1435px;
+  position: relative;
+
+  @media only screen and (min-width: 1455px) {
+    & {
+      background: #272f44 url("../image/Register_Background.jpg") center/contain
+        no-repeat !important;
+    }
+  }
+}
+
+.body {
+  width: 100%;
+  max-width: 1180px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px;
+  .body-inner {
+    margin: 30px 0;
+    img {
+      width: 100%;
+    }
+    .forms {
+      margin: 30px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.1fr 1.2fr;
+      align-items: center;
+      column-gap: 50px;
+      @media only screen and (max-width: $largeScreen) {
+        & {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+      }
+      .register {
+        h2 {
+          font: normal 24px Aramco;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            right: 0;
+            width: 25px;
+            height: 1px;
+            background-color: #000000;
+          }
+        }
+        form {
+          margin-top: 75px;
+          .input-group {
+            position: relative;
+            margin-bottom: 30px;
+            // The submit button container
+            &:last-child {
+              @include Flex(flex-start, center, row);
+            }
+            @media only screen and (max-width: $largeScreen) {
+              & {
+                input {
+                  max-width: none !important;
+                }
+                button {
+                  max-width: none !important;
+                }
+              }
+            }
+            input {
+              width: 100%;
+              max-width: 370px;
+              height: 40px;
+              border-radius: 50px;
+              border: 1px solid #f4f4f4;
+              padding: 0 15px;
+              outline: none;
+              direction: ltr;
+
+              &:focus {
+                & {
+                  border: 1px solid #d2ab68;
+                }
+                & + label {
+                  &::after,
+                  &::before {
+                    background-color: #d2ab68;
+                  }
+                }
+              }
+            }
+            label {
+              position: absolute;
+              top: -12px;
+              right: 30px;
+              color: #808080;
+              background-color: #ffffff;
+              padding: 0 15px;
+              font-size: 14px;
+              &::after {
+                content: "";
+                width: 5px;
+                height: 5px;
+                position: absolute;
+                top: 10px;
+                right: 0;
+                background-color: #f4f4f4;
+                border-radius: 25px;
+              }
+              &::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                background-color: #f4f4f4;
+                border-radius: 25px;
+              }
+            }
+          }
+          button {
+            width: 100%;
+            max-width: 360px;
+            height: 45px;
+            color: #ffffff;
+            background-color: #184ddc;
+            border-radius: 50px;
+            border: 0;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+            &:hover {
+              box-shadow: 0px 5px 15px 0px #bbb;
+            }
+          }
+        }
+      }
+      .border {
+        background: transparent url("../image/FormsBorder.jpg") 100% / cover;
+        height: 340px;
+        width: 2px;
+        @media only screen and (max-width: $largeScreen) {
+          & {
+            display: none;
+          }
+        }
+      }
+      .login {
+        @include Flex(center, center, column);
+        h3 {
+          font: normal 24px Aramco;
+          margin-bottom: 25px;
+        }
+        a {
+          text-decoration: none;
+          color: #184ddc;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 100px;
+}

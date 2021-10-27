@@ -1,0 +1,527 @@
+// VARs
+$largeScreen: 820px;
+$tabletScreen: 768px;
+$mobileScreen: 425px;
+
+@mixin Flex($jus, $align, $dir) {
+  display: flex;
+  justify-content: $jus;
+  align-items: $align;
+  flex-direction: $dir;
+}
+@font-face {
+  font-family: ShabnamLite;
+  src: url("../font/Shabnam-Light-FD.ttf");
+}
+@font-face {
+  font-family: Aramco;
+  src: url("../font/Far_Aramco.ttf");
+}
+@font-face {
+  font-family: Monteserrat;
+  src: url("../font/Montserrat-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal 16px Aramco;
+}
+body {
+  background-color: #272f44;
+}
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.body {
+  .path {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    column-gap: 15px;
+    height: 40px;
+    .path-icon {
+      background-color: #f8f9fb;
+      display: inline-block;
+      @include Flex(center, center, row);
+      border-radius: 25px;
+      i {
+        font-size: 21px;
+        color: #bdc4ce;
+      }
+    }
+    .path-inner {
+      background-color: #f8f9fb;
+      width: 100%;
+      border-radius: 25px;
+      @include Flex(flex-start, center, row);
+      padding: 0 20px;
+      a {
+        color: #bdc4ce;
+        text-decoration: none;
+      }
+      i {
+        color: #bdc4ce;
+        margin: 0 15px;
+        font-size: 12px;
+      }
+      span {
+        color: #282828;
+      }
+    }
+  }
+}
+header {
+  .row-between {
+    width: 100%;
+    height: 150px;
+    @include Flex(space-between, center, row);
+    .logo {
+      width: 200px;
+      height: 100%;
+      @include Flex(space-between, center, row);
+      .logo-txt {
+        span {
+          display: block;
+          color: #ffffff;
+        }
+        padding-right: 10px;
+        border-right: 2px dashed #47516e;
+      }
+    }
+    .site-info {
+      width: 280px;
+      height: 100%;
+      @include Flex(center, center, row);
+      .site-lang {
+        border-right: 2px dashed #47516e;
+        margin-right: 15px;
+        padding-right: 15px;
+        @include Flex(space-between, center, row);
+        .search-box {
+          position: relative;
+          width: 40px;
+          height: 30px;
+          input {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ffffff;
+            border-radius: 25px;
+            outline: none;
+            color: #ffffff;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-color: #272f44;
+            padding: 0 7px;
+            font-size: 12px;
+            transition: all 0.5s;
+
+            &::placeholder {
+              opacity: 0;
+              transition: opacity 0.5s;
+            }
+            &:focus {
+              width: 135px;
+              height: 28px;
+              &::placeholder {
+                opacity: 1;
+              }
+            }
+            @media only screen and (max-width: $tabletScreen) {
+              & {
+                &:focus {
+                  width: 125px;
+                  height: 28px;
+                }
+              }
+            }
+          }
+          .input-handler {
+            width: 10px;
+            height: 2px;
+            transform: rotateZ(40deg);
+            background-color: #ffffff;
+            position: absolute;
+            bottom: 3px;
+            right: 3px;
+          }
+        }
+
+        .lang {
+          display: flex;
+          a {
+            padding: 3px 12px;
+            margin: 0 5px;
+            border: 1px solid #ffffff;
+            border-radius: 25px;
+            font: normal 14px Monteserrat;
+            color: #ffffff;
+            text-decoration: none;
+            &:hover {
+              color: #d2ab68;
+              border: 1px solid #d2ab68;
+            }
+          }
+          @media only screen and (max-width: $tabletScreen) {
+            & {
+              display: none;
+            }
+          }
+        }
+        #lang {
+          width: 55px;
+          height: 27px;
+          font: normal 13px Monteserrat;
+          border-radius: 25px;
+          @include Flex(center, center, row);
+          padding: 0 5px;
+          outline: none;
+          border: 1px solid #ffffff;
+          color: #ffffff;
+          background-color: #272f44;
+          &:focus {
+            border: 1px solid #d2ab68;
+            & {
+              color: #d2ab68;
+            }
+          }
+          option {
+            font: normal 13px Monteserrat;
+            color: #ffffff;
+          }
+          @media only screen and (min-width: $tabletScreen) {
+            & {
+              display: none;
+            }
+          }
+        }
+      }
+      .site-phone {
+        span {
+          color: #ffffff;
+          &:nth-child(1) {
+            color: #ff316d;
+            margin-right: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    width: 100%;
+    height: 110px;
+    @include Flex(space-between, center, row);
+    .access-menu {
+      .menu {
+        display: flex;
+        position: relative;
+        padding-right: 20px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 8px;
+          height: 8px;
+          background-color: #d2ab68;
+        }
+        li {
+          list-style: none;
+          padding: 0 20px;
+          a {
+            text-decoration: none;
+            color: #ffffff;
+            &:hover {
+              color: #d2ab68;
+            }
+          }
+
+          position: relative;
+          .dropdown-btn {
+            display: flex;
+            @include Flex(center, center, row);
+            i {
+              padding: 0 7px 3px 0;
+            }
+            &:hover + .dropdown-inner {
+              opacity: 1;
+              transform: translateY(0);
+              pointer-events: all;
+            }
+          }
+          .dropdown-inner {
+            position: absolute;
+            top: 50px;
+            right: -20px;
+            border-radius: 10px;
+            transform: translateY(10px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.5s;
+            &:hover {
+              opacity: 1;
+              pointer-events: all;
+              transform: translateY(0);
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: -25px;
+              right: 47px;
+              width: 25px;
+              height: 25px;
+              border-radius: 0 0 0 25px;
+              background-color: #272f44;
+              z-index: 1;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              top: -25px;
+              right: 67px;
+              width: 25px;
+              height: 25px;
+              border-radius: 0 0 25px 0;
+              background-color: #272f44;
+              z-index: 1;
+            }
+            ul {
+              width: 240px;
+              height: 150px;
+              @include Flex(space-evenly, center, column);
+              background-color: #ffffff;
+              border-radius: 20px;
+
+              &::after {
+                content: "";
+                position: absolute;
+                top: -25px;
+                right: 50px;
+                background-color: #ffffff;
+                width: 40px;
+                height: 25px;
+              }
+              li {
+                a {
+                  display: block;
+                  width: 220px;
+                  height: 40px;
+                  border-radius: 12px;
+                  background-color: #f8f9fb;
+                  @include Flex(flex-start, center, row);
+                  color: #464646;
+                  padding: 0 15px;
+                  font: normal 15px Aramco;
+                  &:hover {
+                    background-color: #272f44;
+                    color: #ffffff;
+                  }
+                  i {
+                    font-size: 22px;
+                    color: #ffffff;
+                    position: fixed;
+                    top: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+        @media only screen and (max-width: $largeScreen) {
+          & {
+            display: none;
+          }
+        }
+      }
+      .menu-toggle-btn {
+        color: #ffffff;
+        font-size: 28px;
+        border: 1px solid #ffffff;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover {
+          color: #d2ab68;
+          border-color: #d2ab68;
+        }
+        @media only screen and (min-width: $largeScreen) {
+          & {
+            display: none;
+          }
+        }
+      }
+    }
+    .user-menu {
+      ul {
+        @media only screen and (min-width: 1200px) {
+          & {
+            margin-left: 50px;
+          }
+        }
+        display: flex;
+        li {
+          list-style: none;
+          padding: 0 10px;
+          a {
+            text-decoration: none;
+            color: #ffffff;
+
+            &:hover {
+              color: #d2ab68;
+            }
+          }
+        }
+        span {
+          color: #47516e;
+        }
+      }
+    }
+  }
+}
+
+// The Footer
+footer {
+  width: 100%;
+  height: 70px;
+  margin-top: 50px;
+  .container {
+    background: url("../image/FooterPattern.png") 100% 100% no-repeat;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    column-gap: 70px;
+    @media only screen and (max-width: $tabletScreen) {
+      & {
+        grid-template-columns: 3fr 5.5fr;
+      }
+    }
+    @media only screen and (min-width: $largeScreen) {
+      & {
+        grid-template-columns: 1fr 3fr 1fr;
+      }
+    }
+
+    .reserve-time {
+      max-width: 170px;
+      @include Flex(flex-start, center, row);
+      a {
+        text-decoration: none;
+        color: #d2ab68;
+        width: 100%;
+        position: relative;
+        font-size: 15px;
+        padding: 5px 0;
+
+        i {
+          font-size: 20px;
+          position: absolute;
+          top: 20%;
+          left: 10px;
+        }
+        &:hover {
+          i {
+            left: 0;
+          }
+        }
+      }
+    }
+    .copyright {
+      @include Flex(center, center, row);
+      p {
+        color: #ffffff;
+        font-size: 15px;
+        span {
+          color: #d2ab68;
+        }
+      }
+    }
+
+    .socialmedia {
+      min-width: 130px;
+      @include Flex(space-evenly, center, row);
+
+      @media only screen and (max-width: $tabletScreen) {
+        & {
+          display: none;
+        }
+      }
+      i {
+        margin: 0 5px;
+        color: #ffffff;
+        font-size: 15px;
+      }
+      a {
+        &:hover {
+          i {
+            color: #d2ab68;
+          }
+        }
+      }
+    }
+  }
+}
+
+.open-menu {
+  width: 97%;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 25px 25px 0 0;
+  position: fixed;
+  bottom: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  ul {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 0 0;
+    @include Flex(space-evenly, center, column);
+    overflow: hidden;
+    position: relative;
+    padding-top: 20px;
+    transition: bottom 0.5s;
+    &::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: lightgray;
+      position: absolute;
+      top: 10px;
+    }
+    li {
+      list-style: none;
+      width: 100%;
+      height: 100%;
+
+      a {
+        text-decoration: none;
+        color: #464646;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include Flex(center, center, column);
+
+        &:hover {
+          color: #d2ab68;
+        }
+      }
+      .dropdown {
+        height: 100%;
+        a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          @include Flex(center, center, row);
+        }
+      }
+    }
+  }
+}
