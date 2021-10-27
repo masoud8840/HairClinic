@@ -32,15 +32,16 @@ body {
   background: #272f44 url("../image/IndexBackground_Edition.jpg") center/cover
     no-repeat;
   height: 1000px;
-  position: relative;
+  position: relative !important;
 
   @media only screen and (min-width: 1200px) {
     & {
       background: #272f44 url("../image/IndexBackground_Edition.jpg")
-        center/contain no-repeat !important;
+        center/contain no-repeat;
     }
   }
 }
+
 .services {
   width: 100%;
   height: 200px;
@@ -65,6 +66,42 @@ body {
     background: url("../image/IndexServices.jpg") center/cover no-repeat;
     p {
       color: #464646;
+    }
+  }
+}
+.background-overlay {
+  position: absolute;
+  top: 425px;
+  left: 50.25vw;
+  transform: translate(-50%, -50%) rotateZ(-15deg);
+  width: 250px;
+  height: 80px;
+  @include Flex(center, center, column);
+  padding: 20px 0;
+  background-image: url("/public/image/SliderBackground.png");
+  background-size: 122% 160%;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 97%;
+    height: 30px;
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    background-color: transparent;
+    border: none;
+    transform-origin: right bottom;
+    transition: all 0.3s;
+    cursor: move;
+    &::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 135px;
+      height: 35px;
+      background: url("/public/image/SliderThumb.png") center no-repeat;
     }
   }
 }

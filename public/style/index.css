@@ -24,12 +24,12 @@
 body {
   background: #272f44 url("../image/IndexBackground_Edition.jpg") center/cover no-repeat;
   height: 1000px;
-  position: relative;
+  position: relative !important;
 }
 
 @media only screen and (min-width: 1200px) {
   body {
-    background: #272f44 url("../image/IndexBackground_Edition.jpg") center/contain no-repeat !important;
+    background: #272f44 url("../image/IndexBackground_Edition.jpg") center/contain no-repeat;
   }
 }
 
@@ -92,5 +92,59 @@ body {
 
 .services .service p {
   color: #464646;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 425px;
+  left: 50.25vw;
+  -webkit-transform: translate(-50%, -50%) rotateZ(-15deg);
+          transform: translate(-50%, -50%) rotateZ(-15deg);
+  width: 250px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 0;
+  background-image: url("/public/image/SliderBackground.png");
+  background-size: 122% 160%;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+.background-overlay input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 97%;
+  height: 30px;
+  position: absolute;
+  top: -15px;
+  left: 0px;
+  background-color: transparent;
+  border: none;
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: move;
+}
+
+.background-overlay input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 135px;
+  height: 35px;
+  background: url("/public/image/SliderThumb.png") center no-repeat;
 }
 /*# sourceMappingURL=index.css.map */
