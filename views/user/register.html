@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="/public/style/styles.css" />
-    <link rel="stylesheet" href="/public/style/register.css" />
+
     <!-- Fontawesome CND -->
     <link
       rel="stylesheet"
@@ -17,6 +15,9 @@
 
     <!-- Customs -->
     <script src="/public/script/common.js" defer></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/public/style/styles.css" />
+    <link rel="stylesheet" href="/public/style/register.css" />
     <title>کلینیک کاشت مو و ابرو | ثبت نام</title>
   </head>
   <body class="index">
@@ -25,7 +26,7 @@
         <div class="row-between">
           <div class="logo">
             <div class="logo-img">
-              <a href="index.html">
+              <a href="../index.html">
                 <img src="/public/image/logo.png" alt="logo" />
               </a>
             </div>
@@ -60,9 +61,9 @@
         </div>
         <nav>
           <div class="access-menu">
-            <i class="fas fa-bars menu-toggle-btn" @click="toggleMenu"></i>
+            <i class="fas fa-bars menu-toggle-btn" id="menu-toggler"></i>
             <ul class="menu">
-              <li><a href="index.html">صفحه اصلی</a></li>
+              <li><a href="../index.html">صفحه اصلی</a></li>
               <li>
                 <a class="dropdown-btn" href="#">
                   خدمات
@@ -71,7 +72,7 @@
                 <div class="dropdown-inner">
                   <ul>
                     <li>
-                      <a href="services/hairtransplantation.html"
+                      <a href="../services/hairtransplantation.html"
                         >کاشت موی سر</a
                       >
                     </li>
@@ -80,8 +81,8 @@
                   </ul>
                 </div>
               </li>
-              <li><a href="abouts.html">درباره ما</a></li>
-              <li><a href="contacts.html">تماس با ما</a></li>
+              <li><a href="../abouts.html">درباره ما</a></li>
+              <li><a href="../contacts.html">تماس با ما</a></li>
             </ul>
           </div>
           <div class="user-menu">
@@ -166,18 +167,23 @@
         </div>
       </div>
     </footer>
-    <div class="open-menu" :style="ToggleMenu" @click="DragMenu($event)">
-      <ul ul :style="ToggleInsiderMenuStyle">
-        <li><a href="index.html">صفحه اصلی</a></li>
-        <li>
-          <div class="dropdown">
-            <a href="#" class="dropdown-btn" @click="ToggleInsiderMenu"
-              >خدمات</a
-            >
-          </div>
+    <div class="responsive-menu">
+      <ul class="menu-inner">
+        <li><a href="../index.html">صفحه اصلی</a></li>
+        <li class="dropdown-item">
+          <a href="#" class="dropdown-btn">
+            خدمات <i class="fas fa-angle-down" id="dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown">
+            <li>
+              <a href="../services/hairtransplantation.html">کاشت موی سر</a>
+            </li>
+            <li><a href="#">کاشت و ترمیم ریش و سیبیل</a></li>
+            <li><a href="#">کاشت و ترمیم ابرو</a></li>
+          </ul>
         </li>
-        <li><a href="abouts.html">درباره ما</a></li>
-        <li><a href="contacts.html">تماس با ما</a></li>
+        <li><a href="../abouts.html">درباره ما</a></li>
+        <li><a href="../contacts.html">تماس با ما</a></li>
       </ul>
     </div>
   </body>

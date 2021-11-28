@@ -732,17 +732,16 @@ footer .container .socialmedia a:hover i {
 
 .responsive-menu {
   width: 100%;
-  height: 300px;
   background-color: #ffffff;
   border-radius: 25px 25px 0 0;
   position: fixed;
-  bottom: -300px;
+  bottom: -50%;
   left: 0;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
-.responsive-menu ul {
+.responsive-menu ul.menu-inner {
   width: 100%;
   height: 100%;
   border-radius: 25px 25px 0 0;
@@ -766,7 +765,7 @@ footer .container .socialmedia a:hover i {
   transition: bottom 0.5s;
 }
 
-.responsive-menu ul::after {
+.responsive-menu ul.menu-inner::after {
   content: "";
   width: 30px;
   height: 2px;
@@ -775,45 +774,18 @@ footer .container .socialmedia a:hover i {
   top: 10px;
 }
 
-.responsive-menu ul li {
+.responsive-menu ul.menu-inner li {
   list-style: none;
   width: 100%;
-  height: 100%;
+  overflow: hidden;
 }
 
-.responsive-menu ul li a {
+.responsive-menu ul.menu-inner li a {
   text-decoration: none;
   color: #464646;
   display: block;
   width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.responsive-menu ul li a:hover {
-  color: #d2ab68;
-}
-
-.responsive-menu ul li .dropdown {
-  height: 100%;
-}
-
-.responsive-menu ul li .dropdown a {
-  width: 100%;
-  height: 100%;
-  display: block;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -827,5 +799,19 @@ footer .container .socialmedia a:hover i {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.responsive-menu ul.menu-inner li a:hover {
+  color: #d2ab68;
+}
+
+.responsive-menu ul.menu-inner .dropdown-item #dropdown-arrow {
+  font-size: 19px;
+  padding: 0 3px;
+}
+
+.responsive-menu ul.menu-inner .dropdown-item .dropdown {
+  height: 0;
+  background-color: #f4f4f4;
 }
 /*# sourceMappingURL=styles.css.map */
