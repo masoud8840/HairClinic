@@ -15,9 +15,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- Customs -->
+    <script src="/public/script/common.js" defer></script>
     <script src="/public/script/indexScript.js" defer></script>
-    <!-- Vue.js CDN -->
-    <script src="/public/script/script.js" defer></script>
     <title>کلینیک کاشت مو و ابرو</title>
   </head>
   <body class="index">
@@ -61,7 +61,7 @@
         </div>
         <nav>
           <div class="access-menu">
-            <i class="fas fa-bars menu-toggle-btn" @click="toggleMenu"></i>
+            <i class="fas fa-bars menu-toggle-btn" id="menu-toggler"></i>
             <ul class="menu">
               <li><a href="index.html">صفحه اصلی</a></li>
               <li>
@@ -134,14 +134,12 @@
         </div>
       </div>
     </footer>
-    <div class="open-menu" :style="ToggleMenu" @click="DragMenu($event)">
-      <ul ul :style="ToggleInsiderMenuStyle">
+    <div class="responsive-menu">
+      <ul>
         <li><a href="index.html">صفحه اصلی</a></li>
         <li>
           <div class="dropdown">
-            <a href="#" class="dropdown-btn" @click="ToggleInsiderMenu"
-              >خدمات</a
-            >
+            <a href="#" class="dropdown-btn">خدمات</a>
           </div>
         </li>
         <li><a href="abouts.html">درباره ما</a></li>

@@ -371,6 +371,10 @@ header nav {
           flex-direction: row;
 }
 
+header nav .access-menu .isOpen {
+  bottom: 0;
+}
+
 header nav .access-menu .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -726,21 +730,19 @@ footer .container .socialmedia a:hover i {
   color: #d2ab68;
 }
 
-.open-menu {
-  width: 97%;
+.responsive-menu {
+  width: 100%;
   height: 300px;
   background-color: #ffffff;
   border-radius: 25px 25px 0 0;
   position: fixed;
   bottom: -300px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 0;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
-.open-menu ul {
+.responsive-menu ul {
   width: 100%;
   height: 100%;
   border-radius: 25px 25px 0 0;
@@ -764,7 +766,7 @@ footer .container .socialmedia a:hover i {
   transition: bottom 0.5s;
 }
 
-.open-menu ul::after {
+.responsive-menu ul::after {
   content: "";
   width: 30px;
   height: 2px;
@@ -773,13 +775,13 @@ footer .container .socialmedia a:hover i {
   top: 10px;
 }
 
-.open-menu ul li {
+.responsive-menu ul li {
   list-style: none;
   width: 100%;
   height: 100%;
 }
 
-.open-menu ul li a {
+.responsive-menu ul li a {
   text-decoration: none;
   color: #464646;
   display: block;
@@ -800,15 +802,15 @@ footer .container .socialmedia a:hover i {
           flex-direction: column;
 }
 
-.open-menu ul li a:hover {
+.responsive-menu ul li a:hover {
   color: #d2ab68;
 }
 
-.open-menu ul li .dropdown {
+.responsive-menu ul li .dropdown {
   height: 100%;
 }
 
-.open-menu ul li .dropdown a {
+.responsive-menu ul li .dropdown a {
   width: 100%;
   height: 100%;
   display: block;

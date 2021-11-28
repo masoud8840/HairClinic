@@ -286,6 +286,12 @@ body {
   }
 }
 
+.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .footer-desc {
   width: 100%;
   margin: 50px 0;
@@ -295,6 +301,11 @@ body {
       grid-template-columns: 2fr 1fr 1fr;
   -webkit-column-gap: 20px;
           column-gap: 20px;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media only screen and (max-width: 768px) {
@@ -383,7 +394,7 @@ body {
           flex-direction: column;
   padding: 30px;
   direction: rtl;
-  background: #d2ab68 url("../image/Footer_Desc_Sample_Background.jpg") left/contain no-repeat;
+  background: #d2ab68 url("../image/Footer_Desc_Sample_Background.png") left/contain no-repeat;
 }
 
 .footer-desc .sample h4 {

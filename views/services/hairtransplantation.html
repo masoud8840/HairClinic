@@ -14,10 +14,9 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-
-    <!-- Vue.js CDN -->
-    <script src="https://unpkg.com/vue@next" defer></script>
-    <script src="/public/script/script.js" defer></script>
+    <!-- Customs -->
+    <script src="/public/script/hairTransplantationScript.js"></script>
+    <script src="/public/script/common.js"></script>
     <title>کلینیک کاشت مو و ابرو | کاشت موی سر</title>
   </head>
   <body class="index">
@@ -61,7 +60,7 @@
         </div>
         <nav>
           <div class="access-menu">
-            <i class="fas fa-bars menu-toggle-btn" @click="toggleMenu"></i>
+            <i class="fas fa-bars menu-toggle-btn"></i>
             <ul class="menu">
               <li><a href="../index.html">صفحه اصلی</a></li>
               <li>
@@ -260,14 +259,12 @@
         </div>
       </div>
     </footer>
-    <div class="open-menu" :style="ToggleMenu" @click="DragMenu($event)">
-      <ul ul :style="ToggleInsiderMenuStyle">
+    <div class="responsive-menu">
+      <ul>
         <li><a href="../index.html">صفحه اصلی</a></li>
         <li>
           <div class="dropdown">
-            <a href="#" class="dropdown-btn" @click="ToggleInsiderMenu"
-              >خدمات</a
-            >
+            <a href="#" class="dropdown-btn">خدمات</a>
           </div>
         </li>
         <li><a href="../abouts.html">درباره ما</a></li>

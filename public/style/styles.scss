@@ -218,6 +218,9 @@ header {
     height: 110px;
     @include Flex(space-between, center, row);
     .access-menu {
+      .isOpen {
+        bottom: 0;
+      }
       .menu {
         display: flex;
         position: relative;
@@ -469,15 +472,14 @@ footer {
   }
 }
 
-.open-menu {
-  width: 97%;
+.responsive-menu {
+  width: 100%;
   height: 300px;
   background-color: #ffffff;
   border-radius: 25px 25px 0 0;
   position: fixed;
   bottom: -300px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   transition: all 0.4s ease-in-out;
   ul {
     width: 100%;
